@@ -1,13 +1,34 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(word){
+  var re = /[\W_]/g;
+  let lowerWord = word.toLowerCase().replace(re, "");
+  let reverseWord = lowerWord.split("").reverse().join("");
+  if (lowerWord === reverseWord) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
-/* 
+/*
   Add your pseudocode here
+unction isPalindrome(word) {
+  var re = /[\W_]/g;
+  let lowerWord = word.toLowerCase().replace(re, "");
+  let reverseWord = lowerWord.split("").reverse().join("");
+  if (lowerWord === reverseWord) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 */
 
 /*
-  Add written explanation of your solution here
+  lowercase string and remove unwanted expressions using RegExp
+  split the lowercase word to array then reverse array then join the array to string
+  use conditional statements to compare the two strings
 */
 
 // You can run `node index.js` to view these console logs
